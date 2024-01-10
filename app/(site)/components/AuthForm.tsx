@@ -10,7 +10,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { signIn, useSession } from "next-auth/react";
-import { Session } from "inspector";
+
 
 type Variant = 'LOGIN' | 'REGISTER';
 const AuthForm =()=>{
@@ -61,7 +61,7 @@ const AuthForm =()=>{
           })
           .catch(() => toast.error('Something went wrong!'))
           .finally(() => setLoading(false))
-        }
+        } 
     
         if (variant === 'LOGIN') {
           signIn('credentials', {
