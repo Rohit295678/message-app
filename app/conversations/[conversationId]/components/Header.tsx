@@ -25,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({
     const otherUser = useOtherUser(conversation);
     const isActive = members.indexOf(otherUser?.email!) !== -1;
     const [drawerOpen, setDrawerOpen] = useState(false);
+    
 
     const statusText = useMemo(()=>{
         if (conversation.isGroup) {
@@ -35,6 +36,7 @@ const Header: React.FC<HeaderProps> = ({
     },[conversation,isActive]);
     return (
       <>
+      
       <ProfileDrawer 
       data={conversation} 
       isOpen={drawerOpen} 
@@ -89,6 +91,7 @@ const Header: React.FC<HeaderProps> = ({
           hover:text-sky-600
           transition
         "
+
       />
     </div>
     </>
