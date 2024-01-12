@@ -11,6 +11,9 @@ export default async function UsersLayout({
 }) {
   const users = await getUsers();
    const currentUser = await getCurrentUser();
+   if(!currentUser){
+    return null
+   }
   return (
     
     <Sidebar>
